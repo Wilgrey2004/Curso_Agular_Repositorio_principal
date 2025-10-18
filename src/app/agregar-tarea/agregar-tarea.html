@@ -1,0 +1,28 @@
+<div class="flex flex-col mt-5">
+  <h2>Agergar tarea</h2>
+  <div class="flex mt-3 justify-center">
+    <input
+      type="text"
+      #tareaInput
+      class="border-red-500 mb-2 w-52 bg-white text-black p-4 rounded-2xl"
+      placeholder="Escribe una tarea"
+    />
+  </div>
+
+  <div class="flex justify-center">
+    <button
+      class="p-4 bg-blue-500 rounded-2xl border-blue-500"
+      (click)="agregarTarea(tareaInput.value); tareaInput.value = ''"
+    >
+      Agergar tarea
+    </button>
+  </div>
+  <div class="mt-4 text-center">
+    @if(tarea){
+    <p>Tarea : {{ tarea }}</p>
+
+    } @else {
+    <p>No hay tareas</p>
+    }
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div>
+  <h2>Lista de <span>Tareas</span></h2>
+  <ul class="mx-auto">
+    @for (tarea of tareas; track tarea) {
+    <li class="text-red-400">
+      {{ tarea }}
+    </li>
+    }
+  </ul>
+  <div>
+    <input
+      type="text"
+      #inputText
+      required
+      class="bg-white focus:outline-0 text-black p-4 rounded-2xl mb-2"
+      placeholder="Nueva tarea"
+    />
+  </div>
+
+  <div>
+    <button
+      class="p-4 bg-blue-500 rounded-2xl hover:shadow-white shadow-xl"
+      (click)="agregar(inputText.value); inputText.value = ''"
+    >
+      Agregar nueva tarea
+    </button>
+  </div>
+</div>

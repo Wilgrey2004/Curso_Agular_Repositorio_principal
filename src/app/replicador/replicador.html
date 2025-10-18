@@ -1,0 +1,30 @@
+<div class="bg-red-500 p-5 mt-5 rounded-r-2xl">
+  <div>
+    <div class="flex gap-5 justify-evenly flex-col">
+      <label for="inputText">Escribe Algo: </label>
+      <input
+        class="bg-white p-2 rounded-xl text-black focus:outline-0 focus:shadow-2xl shadow-red-950"
+        type="text"
+        name="inputText"
+        id="inputText"
+        (input)="actualizarTexto($event)"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="bg-blue-500 p-5 mt-5 rounded-r-2xl">
+  <div>
+    <div class="flex gap-5 justify-evenly flex-col">
+      <label for="inputTextreplica">replica : </label>
+      <input
+        readonly
+        class="bg-white p-2 rounded-xl text-black focus:outline-0 focus:shadow-2xl shadow-blue-950"
+        type="text"
+        name="inputTextreplica"
+        id="inputTextreplica"
+        [value]="texto"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="mt-5 flexflex-col items-center">
+  <h2>Estatus de autentificacion</h2>
+
+  @if(isAutenticate){
+  <p class="text-green-500">Estas autenticado</p>
+  } @else {
+  <p class="text-red-500">no estas autenticado</p>
+  }
+
+  <button
+    class="p-4 bg-red-500 text-white cursor-pointer mt-5 rounded-2xl"
+    (click)="alternarAutenticacion()"
+  >
+    Cambiar autentificacion
+  </button>
+</div>

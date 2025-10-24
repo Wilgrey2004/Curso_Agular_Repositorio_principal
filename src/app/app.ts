@@ -16,6 +16,7 @@ import { ListadoUsuarios } from './listado-usuarios/listado-usuarios';
 import { HttpClientModule } from '@angular/common/http';
 import { Ejemplopipes } from './ejemplopipes/ejemplopipes';
 import { registerLocaleData } from '@angular/common';
+import { Navegacion } from './navegacion/navegacion';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,7 @@ import { registerLocaleData } from '@angular/common';
   templateUrl: './app.html',
 
   styleUrl: './app.css',
-  imports: [ListadoUsuarios, HttpClientModule, Ejemplopipes],
+  imports: [HttpClientModule, RouterOutlet, Navegacion],
 })
 export class App {
   protected readonly titulo = 'Practicas de';

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mostrar-mensaje',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './mostrar-mensaje.css',
 })
 export class MostrarMensaje {
+  constructor(private route: ActivatedRoute) {}
+
+  ngOninit() {
+    this.mensaje = this.route.snapshot.queryParams['mensaje'] || '';
+  }
+
   mensaje: string = '';
   quitarMensaje() {
     this.mensaje = '';

@@ -1,0 +1,46 @@
+<nav class="flex justify-between items-center bg-grey-500 p-4">
+  <div>
+    <a href="" [routerLink]="['']">Inicio</a>
+  </div>
+
+  <!-- boton de menu para dispositivos pequeños -->
+
+  <!-- <button
+    class=""
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span>X</span>
+  </button> -->
+  <div>
+    <ul class="flex gap-4">
+      <li>
+        <a
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['/mostrar-mensaje']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >mostrar mensajes</a
+        >
+      </li>
+      <li class="">
+        <a href="#" id="navbardropdown" role="button">Opciones ></a>
+        <ul>
+          <li><a [routerLink]="['/configuracion/padre']" routerLinkActive="active">Padre</a></li>
+          <li><a [routerLink]="['/configuracion/hijo']" routerLinkActive="active">Hijo</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
